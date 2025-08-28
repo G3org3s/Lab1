@@ -13,8 +13,7 @@ public class ZipCode {
     
     public ZipCode(int zipCode) {
         if(zipCode > 99999) {
-            System.out.println("Inputted string has more than 5 digits");
-            return;
+            System.out.println("Inputted zipcode has more than 5 digits");
         }
         this.Zip = zipCode;
     }
@@ -81,8 +80,7 @@ public class ZipCode {
         String barCode = "1";
         String str = Integer.toString(this.Zip);
         if(str.length() > 5) {
-            System.out.println("too many digits");
-            return "";
+            System.out.println("Too many digits in barcode");
         }
         while (str.length() < 5) {
             str = '0' + str;
